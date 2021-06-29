@@ -1,0 +1,148 @@
+/* font-family: 'Inter', sans-serif; */
+/* font-family: 'Lexend Deca', sans-serif; */
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100vw;
+    min-height: 100vh;
+}
+
+html {
+    color: white;
+    font-size: 15px;
+    color: hsla(0, 0%, 100%, 0.75);
+    font-family: "Inter", sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: hsl(233, 47%, 7%);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 375px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: hsl(244, 38%, 16%);
+    overflow: hidden;
+}
+
+
+.image {
+    width: 100%;
+    max-width: 654px;
+    height: 275px;
+    background-image: url("images/image-header-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* order: 1; */
+}
+
+.image::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(86, 0, 139, 0.534);
+}
+
+section {
+    padding: 40px;
+}
+
+h1, h2 {
+    color: hsl(0, 0%, 100%);
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+li:last-of-type h2 {
+    text-transform: uppercase;
+}
+
+strong {
+    color: hsl(277, 64%, 61%);
+}
+
+p {
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+li > p {
+    line-height: 2.5;
+    margin-bottom: 20px;
+    font-size:  1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+li:last-of-type > p {
+    margin-bottom: 0;
+}
+
+@media screen and (min-width: 1000px) {
+
+    main {
+        width: 1000px;
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .image {
+        width: 50%;
+        height: auto;
+        background-image: url("images/image-header-desktop.jpg");
+        order: 1;
+    }
+
+    section {
+        width: 50%;
+        padding: 60px;
+        padding-right: 80px;
+    }
+
+    h1 {
+        word-spacing: 3px;
+        letter-spacing: 1px;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    ul {
+        display: flex;
+        width: 87%;
+        justify-content: space-between;
+    }
+
+    p {
+        font-size: .9rem;
+        width: 98%;
+    }
+
+    li > p {
+        margin: 0;
+        letter-spacing: .5px;
+        font-size: .8rem;
+    }
+}
